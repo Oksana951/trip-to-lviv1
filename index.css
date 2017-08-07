@@ -9,7 +9,7 @@ body {
 font-family: Times New Roman sans-serif;
 max-width: 1500px;
 width: 100%;
-margin: 0;
+margin: 0 auto;
 }
 
 h1 {
@@ -25,22 +25,68 @@ h1 span {
 }
 
 
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: flex-wrap;
+@media screen and (max-width: 1000px) {
+    h1 span {
+  font-size: 40px;
+    }
 }
-nav a {
-    margin:8pt;
+
+nav{
+  background:  #75a9f9;  
+  padding: 15px;
+  max-width: 1500px;
+}
+.list-menu{
+  display: flex;
+  list-style: none;
+}
+.list-menu > li > a{
+  color: #021f54;
+  display: block;
+  padding: 5px 15px;
+  margin:0;
     text-decoration: none;
     font-family: Times New Roman sans-serif;
     font-size: 30pt;
     font-weight: 600;
-    color: #021f54;
+   
 }
+
+#btn-menu{
+  display: none;
+  
+}
+#btn-menu + label{
+  display: none; 
+  position: relative;
+  height: 20px;
+  z-index: 1;
+  cursor: pointer;
+  
+}
+#btn-menu + label:before{
+  content: '\f0c9';  
+  display: inline-block;
+  font-family:'FontAwesome';
+  font-size: 22px;
+  
+}
+#btn-menu:checked + label:before{
+  content: '\f00d';
+  color: #f00;
+}
+
+@media screen and (max-width: 1000px) {
  
-.main {
-    background: #75a9f9;
+   #btn-menu + label{
+      display: inline-block;
+   }
+  #btn-menu + label + .list-menu{
+    display: none;
+  }
+  #btn-menu:checked + label + .list-menu{
+    display: block;
+  }
 }
 
 .slideshow-container{
@@ -54,7 +100,6 @@ nav a {
 	top: 100%;
 	width: auto;
 	margin-top: 0;
-	padding: 10px;
 	color:white;
 	font-weight: bold;
 	font-size: 18px;
@@ -77,7 +122,13 @@ nav a {
 	color: #021f54;
     font-size: 20px;
     padding: 8px 12px;
-   
+  
+  
+}
+.teo{
+	display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 .dot{
 	cursor: pointer;
@@ -99,14 +150,6 @@ nav a {
 	-webkit-animation-duration:1s;
 	animation-name:fade;
 	animation-duration:1s;
-}
-@-webkit-keyframes fade{
-	0%{opacity:0.4;}
-	100%{opacity:1;}
-}
-@keyframes fade{
-	0%{opacity:0.4;}
-	100%{opacity:1;}
 }
 
 p, li {
@@ -147,11 +190,37 @@ div.desc {
 .responsive {
     padding: 0 6px;
     float: left;
-    width: 24.99999%;
+    width: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+    div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 
-    
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 25;
+}
+}
 .background {
     margin: 0;
     padding: 0;
@@ -307,7 +376,9 @@ h4 {
 }
 
 .contacts-me {
-    display:inline;
+    display: flex;
+align-items: center;  
+justify-content: center;
 }
 
 .contacts-maps {
@@ -316,6 +387,9 @@ h4 {
 
 .contacts {
     display: flex;
+align-items: center;  
+justify-content: center; 
+    
 }
 
 #contacts {
@@ -348,6 +422,7 @@ input[type=submit]:hover {
 }
 
 input[type=reset] {
+   
     width: 40%;
     background-color: #021f54;
     color: white;
@@ -365,4 +440,56 @@ input[type=reset]:hover {
 hr {
     padding: 1pt 0;
     background: #021f54;
+}
+
+.container-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container-gallery > div {
+    max-width: 800px;
+    margin: 10px;
+}
+div > p {
+    text-align: center;
+}
+div > img {
+    width: 100%;
+}
+.container-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.container-gallery > div {
+    width: 20%;
+    min-width: 200px;
+    margin: 0;
+}
+div > p {
+    text-align: center;
+}
+div > img {
+    width: 100%;
+}
+
+#img-pizza{
+    width: 1000px;
+}
+#text p {
+    font-size: 20px;
+}
+.pizzeria-one {
+ width: 100%;   
+ margin: 0 0 5px 5px;;
+float: right;
+}
+@media screen and (min-width: 300px) {
+#img-pizza{
+    width: 100%;
+}
+    
+    
+    
 }

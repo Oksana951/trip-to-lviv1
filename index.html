@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
     <title>поїздка до львова</title>
 </head>
 <body>
      <header>
        <h1><span>ПОЇЗДКА ДО ЛЬВОВА</span></h1>
     </header>
-  <div class="main"> 
-    <nav id="main">
-        <a href="#main">ГОЛОВНА</a>
-        <a href="#restaurants">РЕСТОРАНИ</a>
-        <a href="#hotels">ГОТЕЛІ</a>
-        <a href="#pizzeria">ПІЦЕРІЯ</a>
-    </nav>
-  </div>
+    
+ <nav>
+  <input type="checkbox" id="btn-menu" />
+  <label for="btn-menu"></label>
+
+  <ul class="list-menu">
+    <li><a href="#main">ГОЛОВНА</a></li>
+    <li><a href="#restaurants">РЕСТОРАНИ</a></li>
+    <li><a href="#hotels">ГОТЕЛІ</a></li>
+    <li><a href="#pizzeria">ПІЦЕРІЯ</a></li>
+  </ul>
+</nav>
   <div class="slidershow-container">
 		<div class="mySlides fade">
 			<div class="numbertext"></div>
             <img src="img/terazza.jpg" alt="restaurant-terazza" style="width:100%">
-			<div class="text">РЕСТОРАН "TERAZZA"</div>
+			<div class="text"></div>
 		</div>
 		<div class="mySlides fade">
 			<div class="numbertext"></div>
             <img src="img/piazza.png" alt="pizzeria-piazza" style="width:100%">
-			<div class="text">ПІЦЕРІЯ "LA PIAZZA"></div>
+			<div class="text"></div>
 		</div>
 		<div class="mySlides fade">
 			<div class="numbertext"></div>
             <img src="img/hotel%20.jpg" alt="hotel" style="width:100%">
-			<div class="text">ГОТЕЛЬ "ЖОРЖ"</div>
+			<div class="text"></div>
 		</div>
 		<a onclick="plusSlides(-1)" class="prev">&#10094</a>
 		<a onclick="plusSlides(+1)" class="next">&#10095</a>
@@ -77,6 +82,7 @@
       <div id="hotels">
       <h2>ГОТЕЛІ</h2>
       <p>Рекомендація готелів від відвідувачів</p>
+      <div class="container-gallery">
       <div class="responsive">
       <div class="gallery">
           <img src="img/leotel.jpg" alt="hotel-leotel" width="300" height="200">
@@ -103,17 +109,14 @@
       </div>
       <br>
       </div>
+      </div>
       <hr>
       <div id="pizzeria">
           <h2>ПІЦЕРІЯ</h2>
-          <div class="option">
-      <img src="img/pizza_1.jpg" alt="pizza" style="width:100%">
-              <p>Піца  — італійська національна страва, а саме, корж зазвичай круглої форми, який покривається томатною пастою та сиром і запікається. У піцу можуть додавати різні інгредієнти, такі як м'ясо, шинка, салямі, морські продукти, овочі, фрукти, гриби, зелень та інші. Для виготовлення піци використовують дріжджове тісто. Всі продукти для піци ріжуться маленькими шматочками, подібними один до одного. Заготівку для піци виготовляють руками, без допомоги валка, через що тісто стає пухкішим. Випікають піцу в печах дровами з дерев місцевих порід: каштану, клену та ін. Печі мурують з туфу (місцевої вулканічної породи). Сучасні печі виготовляють зі спеціальних сортів кераміки. Температура в печі сягає 350 °C. У печі вогонь підтримують цілодобово, за винятком часу її ремонту.
+             <div id="text"> <p>Піца  — італійська національна страва, а саме, корж зазвичай круглої форми, який покривається томатною пастою та сиром і запікається. У піцу можуть додавати різні інгредієнти, такі як м'ясо, шинка, салямі, морські продукти, овочі, фрукти, гриби, зелень та інші. Для виготовлення піци використовують дріжджове тісто. Всі продукти для піци ріжуться маленькими шматочками, подібними один до одного. Заготівку для піци виготовляють руками, без допомоги валка, через що тісто стає пухкішим. Випікають піцу в печах дровами з дерев місцевих порід: каштану, клену та ін. Печі мурують з туфу (місцевої вулканічної породи). Сучасні печі виготовляють зі спеціальних сортів кераміки. Температура в печі сягає 350 °C. У печі вогонь підтримують цілодобово, за винятком часу її ремонту.
 Спеціальні заклади, що спеціалізуються на приготуванні піци, називаються піцеріями. Кухар, що готує піцу називається піцайоло (італ. pizzaiolo).
 
-Піца поширилась по всьому світі і стала інтернаціональною стравою.</p>
-    <img src="img/pizza_2.jpg" alt="pizza" style="width:100%">
-      </div>
+Піца поширилась по всьому світі і стала інтернаціональною стравою.</p></div>
       </div>
       <hr>
       <h2>ТОП</h2>
@@ -138,6 +141,7 @@
   </div>
       </div>
   <hr>
+  <div class="teo">
   <div id="contacts">
   <div class="contacts-me">
       <div id="conts">
@@ -156,6 +160,7 @@
         <input type="submit">
         <input type="reset">
         </form>
+        </div>
         <div class="contacts-maps">
             </div>
           
